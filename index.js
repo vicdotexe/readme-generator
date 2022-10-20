@@ -1,6 +1,8 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const licenses = require('./utils/licenses.js');
+
+// the array of questions to use when prompting
 const questions = [
     generate("input", "Title:", "projectName"),
     generate("input", "Description:", "description"),
@@ -73,4 +75,5 @@ function saveFile(readme){
 inquirer.prompt(questions).then((data)=>{
     saveFile(generateReadMe(data));
 });
+
 
