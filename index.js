@@ -8,7 +8,7 @@ const questions = [
     generate("input", "Description:", "description"),
     generate("input", "Installation:", "installation"),
     generate("input", "Usage:", "usage"),
-    generate("list", "License:", "license", ["choices", licenses.listLicenses()]),
+    generate("list", "License:", "license", ["choices", licenses.getNames()]),
     generate("input", "Contributing:", "contributing"),
     generate("input", "Tests:", "tests"),
     generate("input", "GitHub Username:", "github"),

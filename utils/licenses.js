@@ -92,7 +92,7 @@ const licenses = [
   }
 ]
 
-const listLicenses = function(){
+const getNames = function(){
     return licenses.map(x => x.name);
 }
 
@@ -118,7 +118,7 @@ const getBadgeMarkdown = function(licenseName){
 }
 
 module.exports={
-    listLicenses,
+    getNames,
     getBadgeMarkdown,
     getUrlMarkdown
 }
