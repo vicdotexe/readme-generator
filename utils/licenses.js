@@ -58,24 +58,30 @@ const getLicense = function(name){
     return licenses.find(x => x.name == name);
 }
 
-const getLicenseUrl = function(license){
+const getUrl = function(license){
     return `http://choosealicense.com/licenses/${license.key}/`
 }
 
-const buildBadgeUrl = function(license){
+const getBadgeUrl = function(license){
     return `https://img.shields.io/badge/License-${license.spdx_id}-brightgreen`;
 }
-
-const buildBadge = function(license){
-    return `![${license.name}](${buildBadgeUrl(license)})`
-}
-
-const buildLicenseSection = function(projectName,licenseName){
+const getUrlMarkdown = function(licenseName){
     let license = getLicense(licenseName);
-    return `${buildBadge(license)}\n\nThe ${projectName} project is under the [${license.name}](${getLicenseUrl(license)}). See the link for more details.`
+    return `[${licenseName}](${getUrl(license)})`
 }
+
+const getBadgeMarkdown = function(licenseName){
+    let license = getLicense(licenseName);
+    return `![${license.name}](${getBadgeUrl(license)})`
+}
+
+// const buildLicenseSection = function(projectName,licenseName){
+//     let license = getLicense(licenseName);
+//     return `${buildBadge(license)}\n\nThe ${projectName} project is under the [${license.name}](${getLicenseUrl(license)}). See the link for more details.`
+// }
 
 module.exports={
     listLicenses,
-    buildLicenseSection
+    getBadgeMarkdown,
+    getUrlMarkdown
 }
