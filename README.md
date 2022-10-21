@@ -22,7 +22,7 @@ node index.js
 ## Usage
 The application will begin prompting the user for questions about their project. Upon completion, a README.md will be generated in the 'output' directory.
 
-(walk-through-gif-here)
+[![Watch the video](./assets/screenshot.PNG)](https://watch.screencastify.com/v/u9RcMknEaem6K5Jq7ZAn)
 
 ## Contributing
 Contributions are welcome, contact info is below.

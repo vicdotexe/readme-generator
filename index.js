@@ -30,7 +30,7 @@ function generate(type, message, name, ...rest){
 
 /** Generates the read-me markdown string */
 function generateReadMe(data){
-return `# ${data.projectName}
+    return `# ${data.projectName}
 ${licenses.getBadgeMarkdown(data.license)}
 
 ## Description
@@ -63,8 +63,7 @@ The ${data.projectName} project is under the ${licenses.getUrlMarkdown(data.lice
 GitHub: [${data.github}](https://www.github.com/${data.github})
 
 E-mail: [${data.email}](mailto:${data.email})
-`;
-}
+`;}
 
 /** Saves the string to README.md in the output folder */
 function saveFile(readme){
@@ -75,5 +74,3 @@ function saveFile(readme){
 inquirer.prompt(questions).then((data)=>{
     saveFile(generateReadMe(data));
 });
-
-
